@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanging Page Effect</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .hanging-page {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transform-origin: top center;
+            animation: swing 5s infinite ease-in-out;
+        }
+
+        .hanging-page:before,
+        .hanging-page:after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            width: 2px;
+            height: 10px;
+            background-color: #333;
+            transform: translateX(-50%);
+        }
+
+        .hanging-page:before {
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        .hanging-page:after {
+            transform: translateX(-50%) rotate(-45deg);
+        }
+
+        @keyframes swing {
+            0% {
+                transform: rotateX(-5deg);
+            }
+            25% {
+                transform: rotateX(3deg);
+            }
+            50% {
+                transform: rotateX(-3deg);
+            }
+            75% {
+                transform: rotateX(3deg);
+            }
+            100% {
+                transform: rotateX(-5deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hanging-page">
+        <h1>Hanging Page Effect</h1>
+        <p>This is a simple example of a hanging page effect using HTML and CSS.</p>
+    </div>
+</body>
+</html
