@@ -696,7 +696,7 @@
 
             let selectedTable = null;
             let orderItems = [];
-
+            let totalAmount = 0;
             // Table selection
             tableButtons.forEach(button => {
                 button.addEventListener('click', () => {
@@ -760,7 +760,7 @@
             // Update bill details
             function updateBill() {
                 billItemsList.innerHTML = '';
-                let totalAmount = 0;
+                
 
                 orderItems.forEach(item => {
                     const li = document.createElement('li');
@@ -793,8 +793,7 @@
                     alert('Please place an order first.');
                     return;
                 }
-                window.location.href = "upi://pay?pa=ak1074834@oksbi&pn=Atharv%20Kumbhar";
-                // Simulate payment process
+                window.location.href=`upi://pay?pa=ak1074834@oksbi&pn=Atharv%20Kumbhar&am=${totalAmount}&cu=INR`;
                 setTimeout(() => {
                     paymentStatus.textContent = 'Payment successful. Thank you!';
                     setTimeout(() => {
