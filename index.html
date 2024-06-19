@@ -13,6 +13,7 @@
         }
 
         body {
+         
             font-family: Arial, sans-serif;
             line-height: 1.6;
             background-color: #f0f0f0;
@@ -27,23 +28,24 @@
             padding: 10px;
             margin-bottom: 20px;
                background-color: pink;
-                
+               
         }
 
         main {
-            display: flex;
+               display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .menu-section {
+         
             width: 80%;
             max-width: 600px;
             background-color: #fff;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
-              box-shadow:8px  0px 14px  4px red;
+              
         }
 
         .menu-section h2 {
@@ -93,27 +95,31 @@
            top:15px;
             width: 30px;
         }
-
+          
         .table-buttons {
             display: flex;
             justify-content: center;
             margin-top: 20px;
             margin-bottom: 20px;
             flex-wrap: wrap;
+              background-color: lightgrey;
+              padding:8px;
+          border-radius: 30px;
         }
 
         .table-button {
             padding: 10px;
             margin: 5px;
-            background-color: #333;
-            color: #fff;
+            background-color: grey;
+            color: red;
+            background-color:white;
             border: none;
-            border-radius: 4px;
+            border-radius: 9px;
             cursor: pointer;
         }
 
         .selected-table {
-            background-color: #4CAF50 !important;
+            background-color: black !important;
         }
 
         .order-buttons {
@@ -135,6 +141,7 @@
             cursor: pointer;
             background-color: yellow;
               color:black;
+            
         }
 
         .cancel-order {
@@ -146,9 +153,11 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+          
         }
 
         .bill-section {
+              
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -230,6 +239,8 @@
         h1{   text-shadow:1px 5px 8px black;
          }
         .hanging-page {
+           background-image: url('food1.jpg');
+               background-size:300px 350px; 
             background-color: white;
             padding: 20px;
             margin-bottom: 30px;
@@ -237,7 +248,7 @@
             box-shadow: 0 10px 20px grey;
             position: relative;
             transform-origin: top center;
-            animation: sway 2.5s infinite ease-in-out;
+            animation: sway 3s infinite ease-in-out;
         }
 
         .hanging-page:before,
@@ -262,13 +273,13 @@
 
         @keyframes sway {
             0% {
-                transform: rotateZ(-6deg);
+                transform: rotateZ(-5deg);
             }
             50% {
-                transform: rotateZ(6deg);
+                transform: rotateZ(5deg);
             }
             100% {
-                transform: rotateZ(-6deg);
+                transform: rotateZ(-5deg);
             }
         }
 
@@ -292,13 +303,13 @@
         
 <h3> Menu cards </h3><br>
           <main>
-         <section class="hanging-page" >
-              <div  style="position:relative; left:130px; top:-20px; width:20px;">👀</div>          
-              <h2>Western food</h2>
+          <h2> ◾Fast food 👀</h2><br>
+         <section class="hanging-page" style="width:260px;">
+              
             <div class="menu-list" style="wwidth:20px;" >
                 <div class="item-row">
-                    <div class="color-block" style="background-color: #d8bfd8;"></div>
-                    <span class="item-name">Grilled Cheese Sandwich 🥪</span>
+                    <div class="color-block" style="background-color: #d8bfd8;">🥪</div>
+                    <span class="item-name">Grilled Cheese Sandwich </span>
                    <span class="item-price"> ₹40</span> 
                     <span class ="item-quantity">Quantity:</span>
                      <select class="quantity-selector">
@@ -311,8 +322,8 @@
                     </select>
                 </div>
                 <div class="item-row">
-                    <div class="color-block" style="background-color: #f0e68c;"></div>
-                    <span class="item-name">Pizza 🍕</span>
+                    <div class="color-block" style="background-color: #f0e68c;">🍕</div>
+                    <span class="item-name">Pizza </span>
                    <span class="item-price"> ₹50</span> 
                     <span class ="item-quantity">Quantity:</span>
                      <select class="quantity-selector">
@@ -325,8 +336,8 @@
                     </select>
                 </div>
                 <div class="item-row">
-                    <div class="color-block" style="background-color: #ffb6c1;"></div>
-                    <span class="item-name">Burger 🍔</span>
+                    <div class="color-block" style="background-color: #ffb6c1;">🍔</div>
+                    <span class="item-name">Burger </span>
                     <span class="item-price"> ₹50</span> 
                     <span class ="item-quantity">Quantity:</span>
                     <select class="quantity-selector">
@@ -340,12 +351,11 @@
                 </div>
             </div>
         </section>    
-        <section class="hanging-page">
-          <div class="pin">👀</div>
-            <h2> Drinks 🥂 🍻</h2>
+         <h2> ◾Drinks 🥂 🍻</h2><br>
+        <section class="hanging-page">                     
             <div class="menu-list">
                 <div class="item-row">
-                    <div class="color-block" style="background-color: #ffd700;"></div>
+                    <div class="color-block" style="background-color: #ffd700;">🍵</div>
                     <span class="item-name">चहा</span>
                      <span class="item-price"> ₹8</span> 
                     <span class ="item-quantity">Quantity:</span>
@@ -359,7 +369,7 @@
                     </select>
                 </div>
                 <div class="item-row">
-                    <div class="color-block" style="background-color: #afeeee;"></div>
+                    <div class="color-block" style="background-color: #afeeee;">☕</div>
                     <span class="item-name">कॉफी</span>
                     <span class="item-price"> ₹15</span> 
                     <span class ="item-quantity">Quantity:</span>
@@ -372,9 +382,69 @@
                         <option value="5">5</option>
                     </select>
                 </div>
+                </div>
+        </section>    
+            <h2> ◾ Cold drinks 🍾</h2><br>
+          <section class="hanging-page">                        
                 <div class="item-row">
-                    <div class="color-block" style="background-color: #90ee90;"></div>
+                    <div class="color-block" style="background-color: #90ee90;">🥛</div>
                     <span class="item-name">ताक</span>
+                   <span class="item-price"> ₹20</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                     <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                 <div class="item-row">
+                    <div class="color-block" style="background-color: pink">🍶</div>
+                    <span class="item-name">Lassi</span>
+                   <span class="item-price"> ₹20</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                     <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="item-row">
+                    <div class="color-block" style="background-color: lightcyan">🍋</div>
+                    <span class="item-name">Limca</span>
+                   <span class="item-price"> ₹20</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                     <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+              <div class="item-row">
+                    <div class="color-block" style="background-color: black">🍷</div>
+                    <span class="item-name">Coca-Cola</span>
+                   <span class="item-price"> ₹20</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                     <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="item-row">
+                    <div class="color-block" style="background-color: lightblue">🥂</div>
+                    <span class="item-name">Appy-Fizz</span>
                    <span class="item-price"> ₹20</span> 
                     <span class ="item-quantity">Quantity:</span>
                      <select class="quantity-selector">
@@ -388,10 +458,9 @@
                 </div>
             </div>
         </section>
-
+        <h2> ◾Snaks 🍱</h2><br>
         <section class="hanging-page">
-              <div class="pin">👀</div> 
-            <h2>Snaks 🍱</h2>
+              
             <div class="menu-list">
                 <div class="item-row">
                     <div class="color-block" style="background-color: #ffcccb;"></div>
@@ -452,8 +521,8 @@
             </div>
         </section>
 
+        <h4> Kindly select your table before placing Order </h4>
         
-
         <div class="table-buttons">
             <button class="table-button" data-table="1">Table 1</button>
             <button class="table-button" data-table="2">Table 2</button>
@@ -481,6 +550,7 @@
                 <p id="payment-status"></p>
             </div>
         </div>
+          
     </main>
 
     <footer>
@@ -614,6 +684,14 @@
                         return 15;
                     case 'ताक':
                         return 20;
+                    case 'Lassi':
+                        return 20;
+                    case 'Limca':
+                        return 20;
+                    case 'Coca-Cola':
+                        return 20;
+                    case 'Appy-Fizz':
+                        return 20;                    
                     case 'वडापाव':
                         return 20;
                     case 'इडली':
