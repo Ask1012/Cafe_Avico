@@ -277,6 +277,7 @@
         }
         .pin{ position: relative;
                 top:-20px; left:89px;
+              width:20px;
           }
     </style>
 </head>
@@ -287,11 +288,58 @@
             <h2>Special Offers: 10% Off on Pizzas!</h2>
     </div>
  Select Quantity and place your order.
-<br> <b> __________________Enjoy the Food________________ </b>
+<br> <b> ______________Enjoy the Food_____________ </b>
         
 <h3> Menu cards </h3><br>
           <main>
-             
+         <section class="hanging-page" >
+              <div  style="position:relative; left:130px; top:-20px; width:20px;">👀</div>          
+              <h2>Western food</h2>
+            <div class="menu-list" style="wwidth:20px;" >
+                <div class="item-row">
+                    <div class="color-block" style="background-color: #d8bfd8;"></div>
+                    <span class="item-name">Grilled Cheese Sandwich 🥪</span>
+                   <span class="item-price"> ₹40</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                     <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="item-row">
+                    <div class="color-block" style="background-color: #f0e68c;"></div>
+                    <span class="item-name">Pizza 🍕</span>
+                   <span class="item-price"> ₹50</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                     <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="item-row">
+                    <div class="color-block" style="background-color: #ffb6c1;"></div>
+                    <span class="item-name">Burger 🍔</span>
+                    <span class="item-price"> ₹50</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                    <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+        </section>    
         <section class="hanging-page">
           <div class="pin">👀</div>
             <h2> Drinks 🥂 🍻</h2>
@@ -404,53 +452,7 @@
             </div>
         </section>
 
-        <section class="hanging-page" >
-              <h2>Western food</h2>
-            <div class="menu-list" style="wwidth:20px;" >
-                <div class="item-row">
-                    <div class="color-block" style="background-color: #d8bfd8;"></div>
-                    <span class="item-name">Grilled Cheese Sandwich 🥪</span>
-                   <span class="item-price"> ₹40</span> 
-                    <span class ="item-quantity">Quantity:</span>
-                     <select class="quantity-selector">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <div class="item-row">
-                    <div class="color-block" style="background-color: #f0e68c;"></div>
-                    <span class="item-name">Pizza 🍕</span>
-                   <span class="item-price"> ₹50</span> 
-                    <span class ="item-quantity">Quantity:</span>
-                     <select class="quantity-selector">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <div class="item-row">
-                    <div class="color-block" style="background-color: #ffb6c1;"></div>
-                    <span class="item-name">Burger 🍔</span>
-                    <span class="item-price"> ₹50</span> 
-                    <span class ="item-quantity">Quantity:</span>
-                    <select class="quantity-selector">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-            </div>
-        </section>
+        
 
         <div class="table-buttons">
             <button class="table-button" data-table="1">Table 1</button>
@@ -633,4 +635,4 @@
         });
     </script>
 </body>
-    </html>
+                            </html>
