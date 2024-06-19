@@ -92,7 +92,7 @@
         }
         .quantity-selector {
           position:relative;
-           top:15px;
+           top:10px;
             width: 30px;
         }
           
@@ -290,12 +290,21 @@
                 top:-20px; left:89px;
               width:20px;
           }
+           #ask{ position:relative;
+             left:270px;
+              top:30px;
+            color: #0F4C81;
+              width:20px;
+            }
     </style>
 </head>
 <body>
     <header>
-        <h1> स द् गु रू Canteen <br> (S G M) </h1>
-      </header>  <div class="offers blink">
+        <h1> स द् गु रू Canteen <br> (S G M) </h1>             
+      <h5 id="ask"> Ask.com</h5>
+      </header> 
+                
+             <div class="offers blink">
             <h2>Special Offers: 10% Off on Pizzas!</h2>
     </div>
  Select Quantity and place your order.
@@ -309,7 +318,7 @@
             <div class="menu-list" style="wwidth:20px;" >
                 <div class="item-row">
                     <div class="color-block" style="background-color: #d8bfd8;">🥪</div>
-                    <span class="item-name">Grilled Cheese Sandwich </span>
+                    <span class="item-name">Sandwich</span>
                    <span class="item-price"> ₹40</span> 
                     <span class ="item-quantity">Quantity:</span>
                      <select class="quantity-selector">
@@ -323,7 +332,7 @@
                 </div>
                 <div class="item-row">
                     <div class="color-block" style="background-color: #f0e68c;">🍕</div>
-                    <span class="item-name">Pizza </span>
+                    <span class="item-name">Pizza</span>
                    <span class="item-price"> ₹50</span> 
                     <span class ="item-quantity">Quantity:</span>
                      <select class="quantity-selector">
@@ -337,7 +346,35 @@
                 </div>
                 <div class="item-row">
                     <div class="color-block" style="background-color: #ffb6c1;">🍔</div>
-                    <span class="item-name">Burger </span>
+                    <span class="item-name">HamBurger</span>
+                    <span class="item-price"> ₹50</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                    <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                  <div class="item-row">
+                    <div class="color-block" style="background-color: #f0e68c;">🌭</div>
+                    <span class="item-name">Hotdogs</span>
+                   <span class="item-price"> ₹50</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                     <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="item-row">
+                    <div class="color-block" style="background-color: #ffb6c1;">🍪</div>
+                    <span class="item-name">Waffles</span>
                     <span class="item-price"> ₹50</span> 
                     <span class ="item-quantity">Quantity:</span>
                     <select class="quantity-selector">
@@ -350,14 +387,14 @@
                     </select>
                 </div>
             </div>
-        </section>    
+        </section>    <br><br>
          <h2> ◾Drinks 🥂 🍻</h2><br>
         <section class="hanging-page">                     
             <div class="menu-list">
                 <div class="item-row">
                     <div class="color-block" style="background-color: #ffd700;">🍵</div>
                     <span class="item-name">चहा</span>
-                     <span class="item-price"> ₹8</span> 
+                     <span class="item-price"> ₹10</span> 
                     <span class ="item-quantity">Quantity:</span>
                     <select class="quantity-selector">
                         <option value="0">0</option>
@@ -383,7 +420,7 @@
                     </select>
                 </div>
                 </div>
-        </section>    
+        </section>  <br><br>  
             <h2> ◾ Cold drinks 🍾</h2><br>
           <section class="hanging-page">                        
                 <div class="item-row">
@@ -457,13 +494,13 @@
                     </select>
                 </div>
             </div>
-        </section>
+        </section><br><br>
         <h2> ◾Snaks 🍱</h2><br>
         <section class="hanging-page">
               
             <div class="menu-list">
                 <div class="item-row">
-                    <div class="color-block" style="background-color: #ffcccb;"></div>
+                    <div class="color-block" style="background-color: #ffcccb;">🍔</div>
                     <span class="item-name">वडापाव</span>
                    <span class="item-price"> ₹20</span> 
                     <span class ="item-quantity">Quantity:</span>
@@ -477,9 +514,9 @@
                     </select>
                 </div>
                 <div class="item-row">
-                    <div class="color-block" style="background-color: #add8e6;"></div>
+                    <div class="color-block" style="background-color: #add8e6;">🍚</div>
                     <span class="item-name">इडली</span>
-                   <span class="item-price"> ₹25</span> 
+                   <span class="item-price"> ₹30</span> 
                     <span class ="item-quantity">Quantity:</span>
                      <select class="quantity-selector">
                         <option value="0">0</option>
@@ -491,9 +528,9 @@
                     </select>
                 </div>
                 <div class="item-row">
-                    <div class="color-block" style="background-color: #ffb6c1;"></div>
+                    <div class="color-block" style="background-color: #ffb6c1;">🍛</div>
                     <span class="item-name">मिसळ</span>
-                  <span class="item-price"> ₹30</span> 
+                  <span class="item-price"> ₹50</span> 
                     <span class ="item-quantity">Quantity:</span>
                       <select class="quantity-selector">
                         <option value="0">0</option>
@@ -505,9 +542,37 @@
                     </select>
                 </div>
                 <div class="item-row">
-                  <div class="color-block" style="background-color: #ff6347;"></div>
+                  <div class="color-block" style="background-color: #ff6347;">🥟</div>
                     <span class="item-name">डोसा</span>
-                   <span class="item-price"> ₹25</span> 
+                   <span class="item-price"> ₹30</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                     <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                  <div class="item-row">
+                  <div class="color-block" style="background-color: #ff6347;">🍱</div>
+                    <span class="item-name">पावभाजी</span>
+                   <span class="item-price"> ₹50</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                     <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="item-row">
+                    <div class="color-block" style="background-color: lightcyan">🍩</div>
+                    <span class="item-name">मेंदूवडा</span>
+                   <span class="item-price"> ₹30</span> 
                     <span class ="item-quantity">Quantity:</span>
                      <select class="quantity-selector">
                         <option value="0">0</option>
@@ -520,7 +585,68 @@
                 </div>
             </div>
         </section>
-
+        <br><br>
+            <h2> ◾ Chaat 🍱</h2><br>
+          <section class="hanging-page">                        
+                <div class="item-row">
+                    <div class="color-block" style="background-color: #90ee90;">🍮</div>
+                    <span class="item-name">Panipuri</span>
+                   <span class="item-price"> ₹40</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                     <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                 <div class="item-row">
+                    <div class="color-block" style="background-color: pink">🍚</div>
+                    <span class="item-name">DahiPuri</span>
+                   <span class="item-price"> ₹40</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                     <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                
+              <div class="item-row">
+                    <div class="color-block" style="background-color: black">🍝</div>
+                    <span class="item-name">भेळ</span>
+                   <span class="item-price"> ₹50</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                     <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="item-row">
+                    <div class="color-block" style="background-color: lightblue">🍮</div>
+                    <span class="item-name">शेवपुरी</span>
+                   <span class="item-price"> ₹40</span> 
+                    <span class ="item-quantity">Quantity:</span>
+                     <select class="quantity-selector">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+        </section>
         <h4> Kindly select your table before placing Order </h4>
         
         <div class="table-buttons">
@@ -587,28 +713,32 @@
                     alert('Please select a table first.');
                     return;
                 }
-
+                
                 const menuSections = document.querySelectorAll('.hanging-page');
 
                 menuSections.forEach(section => {
                     const menuItems = section.querySelectorAll('.item-row');
-
+                    
                     menuItems.forEach(item => {
                         const itemName = item.querySelector('.item-name').textContent;
                         const quantity = parseInt(item.querySelector('.quantity-selector').value);
                         const itemPrice =item.querySelector('.item-price').textContent;
-
+                      
                         if (quantity > 0) {
                             const existingItem = orderItems.find(order => order.name === itemName);
-                            if (existingItem) {
+                            
+                             if (existingItem) {
                                 existingItem.quantity += quantity;
                             } else {
                                 orderItems.push({ name: itemName, quantity: quantity ,price:itemPrice});
                             }
                         }
-                    });
-                });
-
+                      });
+                  });
+                if (orderItems.length === 0) {
+                                  alert('Please place an order first.');
+                                  return;
+                            }
                 // Update bill
                 updateBill();
 
@@ -663,7 +793,7 @@
                     alert('Please place an order first.');
                     return;
                 }
-
+                window.location.href = "upi://pay?pa=ak1074834@oksbi&pn=Atharv%20Kumbhar";
                 // Simulate payment process
                 setTimeout(() => {
                     paymentStatus.textContent = 'Payment successful. Thank you!';
@@ -695,22 +825,36 @@
                     case 'वडापाव':
                         return 20;
                     case 'इडली':
-                        return 25;
+                        return 35;
                     case 'मिसळ':
-                        return 30;
+                        return 50;
+                     case 'पावभाजी':
+                        return 50;
                     case 'डोसा':
-                        return 25;
-                    case 'Pizza 🍕':
+                        return 30;
+                    case 'Pizza':
                         return 50;
-                    case 'Burger 🍔':
+                    case 'Burger':
                         return 50;
-                    case 'Grilled Cheese Sandwich 🥪':
+                    case 'Sandwich':
+                        return 40;
+                    case 'मेंदूवडा':
+                        return 30;
+                    case 'Pizza':
+                        return 50;
+                    case 'Panipuri':
+                        return 40;
+                    case 'शेवपुरी':
+                        return 40;
+                    case 'भेळ':
+                        return 50;
+                    case 'DahiPuri':
                         return 40;
                     default:
-                        return 0;
+                        return 0;                    
                 }
             }
         });
     </script>
 </body>
-                            </html>
+</html>        
