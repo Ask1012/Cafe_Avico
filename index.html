@@ -727,7 +727,7 @@
                         if (quantity > 0) {
                             const existingItem = orderItems.find(order => order.name === itemName);
                             
-                             if (existingItem) {
+                             if( order.quantity > existingItem.quantity) {
                                 existingItem.quantity += quantity;
                             } else {
                                 orderItems.push({ name: itemName, quantity: quantity ,price:itemPrice});
