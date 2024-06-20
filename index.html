@@ -725,11 +725,9 @@ orderButton.addEventListener('click', () => {
                         if (quantity > 0) {
                             const existingItem = orderItems.find(order => order.name === itemName);
                             
-                             if(existingItem.quantity > item.quantity) {
-                                existingItem.quantity += quantity;
-                            } else {
+                             
                                 orderItems.push({ name: itemName, quantity: quantity ,price:itemPrice});
-                            }
+                            
                         }
                       });
                   });
