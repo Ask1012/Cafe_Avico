@@ -761,7 +761,7 @@ orderButton.addEventListener('click', () => {
             // Update bill details
             function updateBill() {
                 billItemsList.innerHTML = '';
-                
+                totalAmount=0;
 
                 orderItems.forEach(item => {
                     const li = document.createElement('li');
