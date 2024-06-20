@@ -706,45 +706,57 @@
                     tableNumberDisplay.textContent = selectedTable;
                 });
             });
+orderButton.addEventListener('click', () => {
+    if (selectedTable === null) {
+        alert('Please select a table first.');
+        return;
+    }
 
-            // Order submission
-            orderButton.addEventListener('click', () => {
-                if (selectedTable === null) {
-                    alert('Please select a table first.');
-                    return;
-                }
+    const menuSections = document.querySelectorAll('.hanging-page');
+    let newOrderItems = []; // Temporary array to collect new orders
+
+    menuSections.forEach(section => {
+        const menuItems = section.querySelectorAll('.item-row');
+
+        menuItems.forEach(item => {
+            const itemName = item.querySelector('.item-name').textContent;
+            const quantity = parseInt(item.querySelector('.quantity-selector').value);
+            const itemPrice = item.querySelector('.item-price').textContent;
+
+            if (quantity > 0) {
+                const existingItem = orderItems.find(order => order.name === itemName);
                 
-                const menuSections = document.querySelectorAll('.hanging-page');
+                if (existingItem) {
+                    existingItem.quantity += quantity;
+                } else {
+                    newOrderItems.push({ name: itemName, quantity: quantity, price: itemPrice });
+                }
+            }
+        });
+    });
 
-                menuSections.forEach(section => {
-                    const menuItems = section.querySelectorAll('.item-row');
-                    
-                    menuItems.forEach(item => {
-                        const itemName = item.querySelector('.item-name').textContent;
-                        const quantity = parseInt(item.querySelector('.quantity-selector').value);
-                        const itemPrice =item.querySelector('.item-price').textContent;
-                      
-                        if (quantity > 0) {
-                            const existingItem = orderItems.find(order => order.name === itemName);
-                            
-                             if(existingItem) {
-                                existingItem.quantity += quantity;
-                            } else {
-                                orderItems.push({ name: itemName, quantity: quantity ,price:itemPrice});
-                            }
-                        }
-                      });
-                  });
-                if (orderItems.length === 0) {
-                                  alert('Please place an order first.');
-                                  return;
-                            }
-                // Update bill
-                updateBill();
+    if (newOrderItems.length === 0) {
+        alert('Please place an order first.');
+        return;
+    }
 
-                // Show bill section
-                billSection.classList.add('visible');
-            });
+    // Add new order items to the existing order items
+    newOrderItems.forEach(newItem => {
+        const existingItem = orderItems.find(order => order.name === newItem.name);
+        
+        if (existingItem) {
+            existingItem.quantity += newItem.quantity;
+        } else {
+            orderItems.push(newItem);
+        }
+    });
+
+    // Update bill
+    updateBill();
+
+    // Show bill section
+    billSection.classList.add('visible');
+});
 
             // Cancel order
             cancelOrderButton.addEventListener('click', () => {
