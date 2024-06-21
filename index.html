@@ -767,11 +767,11 @@ orderButton.addEventListener('click', () => {
                     const li = document.createElement('li');
                     li.textContent = `${item.name} ${item.price} x ${item.quantity} - ₹${(getItemPrice(item.name) * item.quantity).toFixed(2)}`;
                     billItemsList.appendChild(li);
-                    finalAmount = totalAmount + getItemPrice(item.name) * item.quantity; // Assuming a function getItemPrice() exists to get item prices
+                    totalAmount += getItemPrice(item.name) * item.quantity; // Assuming a function getItemPrice() exists to get item prices
                 });
-
-                totalAmountDisplay.textContent ="  ₹"+ totalAmount.toFixed(2);
-                   
+                finalAmount= totalAmount;
+                totalAmountDisplay.textContent ="  ₹"+ finalAmount.toFixed(2);
+                   totalAmount=0;
             }
 
 
@@ -802,10 +802,11 @@ orderButton.addEventListener('click', () => {
                     paymentStatus.textContent = 'Payment successful. Thank you!';
                     setTimeout(() => {
                         paymentStatus.textContent = '';
+                        finalAmount=0;
                         cancelOrderButton.click(); // Automatically cancel order after successful payment
                     }, 3000); // Display thank you message for 3 seconds
                 }, 2000);
-                finalAmount=0;// Simulate payment processing time of 2 seconds
+                // Simulate payment processing time of 2 seconds
             });
 
             // Function to get item price (replace with actual price fetching logic)
