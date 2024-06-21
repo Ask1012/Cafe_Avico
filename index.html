@@ -761,8 +761,7 @@ orderButton.addEventListener('click', () => {
             // Update bill details
             function updateBill() {
                 billItemsList.innerHTML = '';
-                totalAmount=0;
-
+                
                 orderItems.forEach(item => {
                     const li = document.createElement('li');
                     li.textContent = `${item.name} ${item.price} x ${item.quantity} - ₹${(getItemPrice(item.name) * item.quantity).toFixed(2)}`;
@@ -771,7 +770,9 @@ orderButton.addEventListener('click', () => {
                 });
 
                 totalAmountDisplay.textContent ="  ₹"+ totalAmount.toFixed(2);
+                totalAmount=0;
             }
+
 
             // Clear bill details 
             function clearBill() {
