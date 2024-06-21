@@ -319,7 +319,7 @@
                 <div class="item-row">
                     <div class="color-block" style="background-color: #d8bfd8;">🥪</div>
                     <span class="item-name">Sandwich</span>
-                   <span class="item-price"> ₹40</span> 
+                   <span class="item-price"> ₹80</span> 
                     <span class ="item-quantity">Quantity:</span>
                      <select class="quantity-selector">
                         <option value="0">0</option>
@@ -333,7 +333,7 @@
                 <div class="item-row">
                     <div class="color-block" style="background-color: #f0e68c;">🍕</div>
                     <span class="item-name">Pizza</span>
-                   <span class="item-price"> ₹50</span> 
+                   <span class="item-price"> ₹120</span> 
                     <span class ="item-quantity">Quantity:</span>
                      <select class="quantity-selector">
                         <option value="0">0</option>
@@ -347,7 +347,7 @@
                 <div class="item-row">
                     <div class="color-block" style="background-color: #ffb6c1;">🍔</div>
                     <span class="item-name">HamBurger</span>
-                    <span class="item-price"> ₹50</span> 
+                    <span class="item-price"> ₹80</span> 
                     <span class ="item-quantity">Quantity:</span>
                     <select class="quantity-selector">
                         <option value="0">0</option>
@@ -361,7 +361,7 @@
                   <div class="item-row">
                     <div class="color-block" style="background-color: #f0e68c;">🌭</div>
                     <span class="item-name">Hotdogs</span>
-                   <span class="item-price"> ₹50</span> 
+                   <span class="item-price"> ₹80</span> 
                     <span class ="item-quantity">Quantity:</span>
                      <select class="quantity-selector">
                         <option value="0">0</option>
@@ -375,7 +375,7 @@
                 <div class="item-row">
                     <div class="color-block" style="background-color: #ffb6c1;">🍪</div>
                     <span class="item-name">Waffles</span>
-                    <span class="item-price"> ₹50</span> 
+                    <span class="item-price"> ₹80</span> 
                     <span class ="item-quantity">Quantity:</span>
                     <select class="quantity-selector">
                         <option value="0">0</option>
@@ -516,7 +516,7 @@
                 <div class="item-row">
                     <div class="color-block" style="background-color: #add8e6;">🍚</div>
                     <span class="item-name">इडली</span>
-                   <span class="item-price"> ₹30</span> 
+                   <span class="item-price"> ₹35</span> 
                     <span class ="item-quantity">Quantity:</span>
                      <select class="quantity-selector">
                         <option value="0">0</option>
@@ -814,7 +814,7 @@ orderButton.addEventListener('click', () => {
                 // Replace with actual item price logic based on itemName
                 switch (itemName) {
                     case 'चहा':
-                        return 2;
+                        return 10;
                     case 'कॉफी':
                         return 15;
                     case 'ताक':
@@ -838,11 +838,15 @@ orderButton.addEventListener('click', () => {
                     case 'डोसा':
                         return 30;
                     case 'Pizza':
-                        return 50;
-                    case 'Burger':
-                        return 50;
+                        return 120;
+                    case 'HamBurger':
+                        return 80;
                     case 'Sandwich':
-                        return 40;
+                        return 80;
+                    case 'waffles':
+                        return 80;
+                    case 'Hotdogs':
+                        return 80;
                     case 'मेंदूवडा':
                         return 30;
                     case 'Pizza':
