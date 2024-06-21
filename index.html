@@ -697,6 +697,7 @@
             let selectedTable = null;
             let orderItems = [];
             let totalAmount = 0;
+            let finalAmount=0;
             // Table selection
             tableButtons.forEach(button => {
                 button.addEventListener('click', () => {
@@ -740,7 +741,7 @@ orderButton.addEventListener('click', () => {
                             }
                 // Update bill
                 updateBill();
-
+                totalAmount=0;
                 // Show bill section
                 billSection.classList.add('visible');
                resetQuantities();
@@ -766,11 +767,11 @@ orderButton.addEventListener('click', () => {
                     const li = document.createElement('li');
                     li.textContent = `${item.name} ${item.price} x ${item.quantity} - ₹${(getItemPrice(item.name) * item.quantity).toFixed(2)}`;
                     billItemsList.appendChild(li);
-                    totalAmount += getItemPrice(item.name) * item.quantity; // Assuming a function getItemPrice() exists to get item prices
+                    finalAmount = totalAmount + getItemPrice(item.name) * item.quantity; // Assuming a function getItemPrice() exists to get item prices
                 });
 
                 totalAmountDisplay.textContent ="  ₹"+ totalAmount.toFixed(2);
-                
+                   totalAmount=0;
             }
 
 
@@ -804,7 +805,7 @@ orderButton.addEventListener('click', () => {
                         cancelOrderButton.click(); // Automatically cancel order after successful payment
                     }, 3000); // Display thank you message for 3 seconds
                 }, 2000);
-                totalAmount=0;// Simulate payment processing time of 2 seconds
+                finalAmount=0;// Simulate payment processing time of 2 seconds
             });
 
             // Function to get item price (replace with actual price fetching logic)
