@@ -797,7 +797,7 @@ orderButton.addEventListener('click', () => {
                     return;
                 } 
                 
-                window.location.href=`upi://pay?pa=gurav15dg@okhdfcbank&pn=Atharv%20Kumbhar&am=${totalAmount}&cu=INR`;
+                window.location.href=`upi://pay?pa=gurav15dg@okhdfcbank&pn=Atharv%20Kumbhar&am=${finalAmount}&cu=INR`;
                 setTimeout(() => {
                     paymentStatus.textContent = 'Payment successful. Thank you!';
                     setTimeout(() => {
