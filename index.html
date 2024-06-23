@@ -702,7 +702,7 @@
             </div>
             <div class="payment-options">
                 <button class="payment-button">Pay Online</button>
-             <button class="payment-button">pay with Cash</button>
+             <button id="cashbutton" class="payment-button">pay with Cash</button>
                    <p id="payment-status"></p>
             </div>
         </div> <br>
@@ -870,7 +870,22 @@ orderButton.addEventListener('click', () => {
                 }, 2000);
                 // Simulate payment processing time of 2 seconds
             });
-
+            const cashButton = document.getElementById('cashbutton');
+            paymentButton.addEventListener('click', () => {
+                if (orderItems.length === 0) {
+                    alert('Please place an order first.');
+                    return;
+                } 
+                setTimeout(() => {
+                    paymentStatus.textContent = 'Order placed. Thank you!';
+                    setTimeout(() => {
+                        paymentStatus.textContent = '';
+                        finalAmount=0;
+                        cancelOrderButton.click(); // Automatically cancel order after successful payment
+                    }, 2000); // Display thank you message for 3 seconds
+                }, 2000);
+                // Simulate payment processing time of 2 seconds
+            });
             // Function to get item price (replace with actual price fetching logic)
             function getItemPrice(itemName) {
                 // Replace with actual item price logic based on itemName
