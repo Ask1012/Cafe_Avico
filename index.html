@@ -326,12 +326,14 @@
               padding:15px;
           background-color:lightgrey;
           }  
-
+          #clgid{ font-size:13px;
+          }
     </style>
 </head>
 <body>
     <header>
-        <h1> स द् गु रू Canteen <br> (S G M) </h1>             
+        <h1> स द् गु रू Canteen <br> (S G M)
+<a id="clgid" href="clg.html"><h7>click here</h7></a> </h1>             
       <h5 id="ask"> Ask.com</h5>
       </header>                               
 <div class="offers blink">              
@@ -703,8 +705,8 @@
             <div class="payment-options">
                 <button class="payment-button">Pay Online</button>
              <button id="cashbutton" class="payment-button">pay with Cash</button>
-                   <p id="payment-status"></p>
-            </div>
+                 </div><br>  <p id="payment-status"></p>
+            
         </div> <br>
 <img id="clgimg" src="clg.png" styl></img>
 <br><br>
@@ -871,7 +873,7 @@ orderButton.addEventListener('click', () => {
                 // Simulate payment processing time of 2 seconds
             });
             const cashButton = document.getElementById('cashbutton');
-            paymentButton.addEventListener('click', () => {
+            cashButton.addEventListener('click', () => {
                 if (orderItems.length === 0) {
                     alert('Please place an order first.');
                     return;
@@ -882,8 +884,8 @@ orderButton.addEventListener('click', () => {
                         paymentStatus.textContent = '';
                         finalAmount=0;
                         cancelOrderButton.click(); // Automatically cancel order after successful payment
-                    }, 2000); // Display thank you message for 3 seconds
-                }, 2000);
+                    }, 1000); // Display thank you message for 3 seconds
+                }, 1000);
                 // Simulate payment processing time of 2 seconds
             });
             // Function to get item price (replace with actual price fetching logic)
