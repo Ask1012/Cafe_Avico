@@ -100,17 +100,22 @@
         }
           
         .table-buttons {
+            width:80%;            
+            justify-content:centre;
             display: flex;
-            justify-content: center;
+            position:relative;
+             right:-60px;
             margin-top: 20px;
             margin-bottom: 20px;
             flex-wrap: wrap;
               background-color: lightgrey;
-              padding:8px;
+              padding:18px;
           border-radius: 30px;
         }
 
         .table-button {
+            justify-content: flex-end;
+          
             padding: 10px;
             margin: 5px;
             background-color: grey;
@@ -312,6 +317,34 @@
                 position:relative;
                  top:-5px;
           }
+          
+        nav ul { 
+          
+          position:fixed;  
+          top:250px;
+          left:-2px;
+        }
+
+        nav ul li {
+            
+            align-items:right;
+              justify-content: flex-end;
+            width:70%;
+            align-items:right;
+            border-radius:1px 20px 5px;
+            padding:10px;
+             background-color:black;
+            margin: 5px;
+        }
+
+        nav ul li a {
+              
+            color: white;
+            text-decoration: none;
+            font-weight: normal;
+             font-size:12px;
+        }
+
     </style>
 </head>
 <body>
@@ -324,11 +357,19 @@
 <div class="offers blink">              
  <h2>Special Offers: 10% Off on Pizzas!</h2>
 </div>
-<p>Select Quantity and place your order.
-<br> <b> _______________Enjoy the Food_____________ </b>
-  <br><br>  <h3> Menu cards </h3>  <br> </p>
+
+    <div class="table-buttons">
+            <button class="table-button" data-table="1">Table 1</button>
+            <button class="table-button" data-table="2">Table 2</button>
+            <button class="table-button" data-table="3">Table 3</button>
+            <button class="table-button" data-table="4">Table 4</button>
+            <button class="table-button" data-table="5">Table 5</button>
+            <button class="table-button" data-table="6">Table 6</button>
+        </div>  
+      
+<br><br>  <h3> Menu cards </h3>  <br> </p>
           <main>
-          <h2> ◾Fast food 👀</h2><br>
+          <h2 id="Fastfood"> ◾Fast food 👀</h2><br>
          <section class="hanging-page" style="width:260px;">
               
             <div class="menu-list" style="wwidth:20px;" >
@@ -404,7 +445,7 @@
                 </div>
             </div>
         </section>    <br><br>
-         <h2> ◾Drinks 🥂 🍻</h2><br>
+         <h2 id="drink">> ◾Drinks 🥂 🍻</h2><br>
         <section class="hanging-page">                     
             <div class="menu-list">
                 <div class="item-row">
@@ -437,7 +478,7 @@
                 </div>
                 </div>
         </section>  <br><br>  
-            <h2> ◾ Cold drinks 🍾</h2><br>
+            <h2 id="colddrink"> ◾ Cold drinks 🍾</h2><br>
           <section class="hanging-page">                        
                 <div class="item-row">
                     <div class="color-block" style="background-color: #90ee90;">🥛</div>
@@ -511,7 +552,7 @@
                 </div>
             </div>
         </section><br><br>
-        <h2> ◾Snaks 🍱</h2><br>
+        <h2 id="sanks"> ◾Snaks 🍱</h2><br>
         <section class="hanging-page">
               
             <div class="menu-list">
@@ -663,16 +704,17 @@
                 </div>
             </div>
         </section>
+        <nav id="menu">
+            <ul>
+                <li><a href="#Fastfood">Fastfood</a></li>
+                <li><a href="#drink">Drinks</a></li>
+                <li><a href="#colddrink">Cold Drinks</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>  
         <h4> Kindly select your table before placing Order </h4>
         
-        <div class="table-buttons">
-            <button class="table-button" data-table="1">Table 1</button>
-            <button class="table-button" data-table="2">Table 2</button>
-            <button class="table-button" data-table="3">Table 3</button>
-            <button class="table-button" data-table="4">Table 4</button>
-            <button class="table-button" data-table="5">Table 5</button>
-            <button class="table-button" data-table="6">Table 6</button>
-        </div>
+        
 
         <div class="order-buttons">
             <button class="order-button">Place Order</button>
@@ -692,7 +734,8 @@
              <button id="cashbutton" class="payment-button">pay with Cash</button>
                  </div><br>  <p id="payment-status"></p>
             
-        </div> <br>
+        </div>
+         <br>
  </main>
 
     <footer>
@@ -910,8 +953,17 @@ orderButton.addEventListener('click', () => {
                         return 0;                    
                 }
             }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
-    </script>
+    });
+  </script>
 </body>
 </html>        
-                   
+                                      
