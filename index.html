@@ -25,12 +25,11 @@
         }
 
         header { border-radius:20px;
-            text-align: center;
-            background-color: blue;
-            color: #fff;
+            text-align: center;           
+            color: red;
             padding: 10px;
             margin-bottom: 20px;
-               background-color: pink;
+            background-color: black;
                
         }
 
@@ -125,8 +124,13 @@
             border: none;
             border-radius: 9px;
             cursor: pointer;
+            transition: transform 1s, background-color 0.1s;
+      
         }
-
+        .table-button:active {
+            transform: scale(-2.1);
+            background-color: black;
+        }
         .selected-table {
             background-color: black  !important;
         }
@@ -353,7 +357,7 @@
 </head>
 <body>
     <header>
-        <h1> स द् गु रू Canteen <br> (S G M)
+        <h1> Cafe T T M M <br>
  </h1>             
       <h5 id="ask"> Ask.com</h5>
       </header>          
