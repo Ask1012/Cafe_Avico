@@ -821,6 +821,25 @@ orderButton.addEventListener('click', () => {
                                   alert('Please place an order first.');
                                   return;
                             }
+            const orderDetails = {
+    table: selectedTable,
+    items: orderItems,
+    timestamp: new Date().toISOString()
+};
+              fetch('/order', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(orderDetails)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Order sent:', data);
+                })
+                .catch(error => {
+                    console.error('Error sending order:', error);
+                });
                 // Update bill
                 updateBill();
                 totalAmount=0;
