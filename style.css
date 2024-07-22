@@ -246,8 +246,7 @@
         h1{   text-shadow:1px 5px 8px black;
          }
         .hanging-page {
-           background-image: url('f2.jpg');
-               background-size:300px 350px; 
+            background-size:300px 350px; 
             background-color: white;
             padding: 20px;
             margin-bottom: 30px;
@@ -343,7 +342,7 @@
         .headerimg{
         position:relative;
         left:-20px;
-        background-image:url('f2.jpg');
+        
         width:113%;
          height:700px;
         display:block;
