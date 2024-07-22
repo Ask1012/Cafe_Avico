@@ -1,4 +1,4 @@
-   * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -13,7 +13,7 @@
             line-height: 1.6;
             background-color: #f0f0f0;
               margin: 20px;      
-                                      
+             margin-top:0;                         
         }
 
         header { border-radius:20px;
@@ -21,7 +21,8 @@
             color: white;
             padding: 10px;
             margin-bottom: 20px;
-            background-color: pink;
+            background-color: black;
+            opacity:0.3;
                
         }
 
@@ -91,18 +92,18 @@
         }
           
         .table-buttons {
-            width:80%;            
+            width:70%;            
             justify-content:centre;
             display: flex;
             position:relative;
              
             margin-top: 20px;
             margin-bottom: 20px;
-            margin-left:65px;
-            flex-wrap: wrap;
-              background-color: lightgrey;
-              padding:18px 15px 18px 30px;
-          border-radius: 30px;
+            margin-left:100px;
+            flex-wrap: wrap;                      
+            padding:18px 15px 18px 30px;
+            border-radius: 30px;
+            overflow:hidden;
         }
 
         .table-button {
@@ -222,7 +223,7 @@
             text-align: center;
             margin-top: 20px;
             animation: blinker 1s linear infinite;
-          border:1px solid white;
+          
             padding:1px;
               font-size:14px;
                  position:relative;top:-7px;
@@ -297,13 +298,7 @@
                 top:-20px; left:89px;
               width:20px;
           }
-           #ask{ position: absolute;
-             right:30px;
-              top:145px;
-            color: #0F4C81;
-              width:20px;
-          font-size:10px;
-            }
+           
         h3{ 
              
            justify-items:center;
@@ -315,7 +310,8 @@
            }
           #clgid{ font-size:13px;
                 position:relative;
-                 top:-5px;
+                 top:-15px;
+                 left:15px;
           }
           
         nav ul { 
@@ -344,3 +340,14 @@
             font-weight: normal;
              font-size:12px;
         }
+        .headerimg{
+        position:relative;
+        left:-20px;
+        background-image:url('f2.jpg');
+        width:113%;
+         height:700px;
+        display:block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
+          }
