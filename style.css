@@ -92,7 +92,7 @@
         }
           
         .table-buttons {
-            width:64%;            
+            width:69%;            
             justify-content:centre;
             display: flex;
             position:relative;
@@ -246,6 +246,8 @@
         h1{   text-shadow:1px 5px 8px black;
          }
         .hanging-page {
+            width:90%;
+            height:100%;
             background-size:300px 350px; 
             background-color: white;
             padding: 20px;
