@@ -11,7 +11,7 @@
 </head>
 <body>
     
-    <section class="headerimg" >
+    <section class="headerimg lazy-bg" data-bg="f2.jpg" >
     <header>
         <h1 style="font-size:28px;"> स द् गु रू Canteen  <br> S G M
  </h1>             
@@ -36,7 +36,7 @@
 <br><br>  <h3> Menu cards </h3>  <br> </p>
           <main>
           <h2 id="Fastfood"> ◾Fast food 👀</h2><br>
-         <section class="hanging-page" style="width:260px;">
+         <section class="hanging-page lazy-bg" data-bg="f2.jpg" style="width:260px;">
               
             <div class="menu-list" style="wwidth:20px;" >
                 <div class="item-row">
@@ -424,6 +424,27 @@ Designed by Team ASK Contact us:<br>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+           
+               let lazyBackgrounds = [].slice.call(document.querySelectorAll('.lazy-bg'));
+
+    if ("IntersectionObserver" in window) {
+        let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazyBackground = entry.target;
+                    lazyBackground.style.backgroundImage = 'url(' + lazyBackground.dataset.bg + ')';
+                    lazyBackgroundObserver.unobserve(lazyBackground);
+                }
+            });
+        });
+
+        lazyBackgrounds.forEach(function(lazyBackground) {
+            lazyBackgroundObserver.observe(lazyBackground);
+        });
+    }
+            
+        
+            
             const tableButtons = document.querySelectorAll('.table-button');
             const orderButton = document.querySelector('.order-button');
             const cancelOrderButton = document.querySelector('.cancel-order');
