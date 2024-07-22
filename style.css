@@ -14,7 +14,7 @@
             background-color: #f0f0f0;
               margin: 20px;      
              margin-top:0;    
-            overflow:hidden;
+            
         }
 
         header { border-radius:20px;
@@ -93,14 +93,14 @@
         }
           
         .table-buttons {
-            width:69%;            
+            width:72%;            
             justify-content:centre;
             display: flex;
             position:relative;
              background-color:cyan;
             margin-top: 20px;
             margin-bottom: 20px;
-            margin-left:100px;
+            margin-left:90px;
             flex-wrap: wrap;                      
             padding:18px 15px 18px 30px;
             border-radius: 30px;
