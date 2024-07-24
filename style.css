@@ -357,3 +357,36 @@
 .lazy-bg[data-bg] {
     background-color: #f0f0f0;
                     }
+@media (min-width: 600px) {
+    
+     .hanging-page{
+      width:90%;
+      height:100%;
+    }  
+    .item-row {
+     font-size:38px; 
+    padding:15px;
+   } 
+  .item-name {
+            font-size:38px;
+        }
+          .item-price {   
+              font-size:38px;
+          
+       }
+        .item-quantity{
+        font-size:38px;
+        } 
+        .color-block{
+        width:58px;
+        height:55px;
+        font-size:38px;
+        }       
+        .quantity-selector{
+         width:70px;
+         position:relative;
+        top:20px;
+         left:-100px;
+        }
+}
+
