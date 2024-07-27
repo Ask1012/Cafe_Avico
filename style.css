@@ -359,6 +359,7 @@
                     }
 @media (min-width: 600px) {
      header h1{
+     opacity:0.8;
       font-size:42px;           
      }        
      .hanging-page{
