@@ -253,7 +253,7 @@
             background-size:300px 350px; 
             background-color: white;
             padding: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             border-radius: 10px;
             box-shadow: 0 10px 20px grey;
             position: relative;
@@ -393,5 +393,8 @@
       width:80%;
       height:80%;
       }
+     hanging-page{
+     margin-bottom:90px;
+     }
 }
 
