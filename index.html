@@ -460,7 +460,39 @@ Designed by Team ASK Contact us:<br>
             lazyBackgroundObserver.observe(lazyBackground);
         });
     }
-            
+let currentIndex = 0;
+
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+const nextButton = document.querySelector('.next');
+const prevButton = document.querySelector('.prev');
+
+function showNextSlide() {
+    currentIndex++;
+    if (currentIndex >= totalSlides) {
+        currentIndex = 0;
+    }
+    updateSlidePosition();
+}
+
+function showPrevSlide() {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = totalSlides - 1;
+    }
+    updateSlidePosition();
+}
+
+function updateSlidePosition() {
+    const offset = -currentIndex * 100;
+    document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+}
+
+nextButton.addEventListener('click', showNextSlide);
+prevButton.addEventListener('click', showPrevSlide);
+
+setInterval(showNextSlide, 2100); // Change slide every 3 seconds
+
         
             
             const tableButtons = document.querySelectorAll('.table-button');
