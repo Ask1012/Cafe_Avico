@@ -33,13 +33,13 @@
             align-items: center;
         }
        .slider {
-    width: 70%;
-    height: 70%;
+    width: 60%;
+    height: 40%;
     box-shadow: 0 20px 20px 5px grey; /* Corrected box-shadow */
     overflow: hidden;
     position: absolute;
-    top:260px;
-     left:160px;
+    top:220px;
+     left:110px;
     border-radius: 10px;
 }
 
